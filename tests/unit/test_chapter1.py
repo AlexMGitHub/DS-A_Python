@@ -15,11 +15,16 @@
 """
 
 # %% Imports
+# Standard system imports
 import random
 from array import array
 from unittest.mock import patch
+
+# Related third party imports
 import numpy as np
 import pytest
+
+# Local application/library specific imports
 import dsa.chapter1_exercises as chap1
 
 

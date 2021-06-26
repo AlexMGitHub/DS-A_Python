@@ -1,0 +1,4 @@
+htmlcov/
+*.pyc
+*.egg*
+.coverage
