@@ -34,6 +34,7 @@ def test_is_multiple():
     assert not chap1.is_multiple(26, 3)
     assert not chap1.is_multiple(20, 6)
 
+
 def test_is_even():
     """R-1.2
     Takes an integer value and returns True if k is even, and False otherwise.
@@ -47,6 +48,7 @@ def test_is_even():
     assert not chap1.is_even(35)
     assert not chap1.is_even(111)
 
+
 def test_minmax():
     """R-1.3
     Takes a sequence of one or more numbers, and returns the smallest and
@@ -54,12 +56,13 @@ def test_minmax():
     built-in functions min or max in implementing the solution.
     """
     np.random.seed = 111
-    data1 = list(np.random.randint(0,1000, size=100))
-    data2 = tuple(np.random.randint(0,1000, size=50))
-    data3 = list(np.random.randint(0,1000, size=1000))
+    data1 = list(np.random.randint(0, 1000, size=100))
+    data2 = tuple(np.random.randint(0, 1000, size=50))
+    data3 = list(np.random.randint(0, 1000, size=1000))
     assert chap1.minmax(data1) == (min(data1), max(data1))
     assert chap1.minmax(data2) == (min(data2), max(data2))
     assert chap1.minmax(data3) == (min(data3), max(data3))
+
 
 def test_sum_of_squares():
     """R-1.4
@@ -71,6 +74,7 @@ def test_sum_of_squares():
     assert chap1.sum_of_squares(6) == 55
     assert chap1.sum_of_squares(10) == 285
 
+
 def test_sos_one_line():
     """R-1.5
     Give a single command that computes the sum from Exercise R-1.4, relying
@@ -80,6 +84,7 @@ def test_sos_one_line():
     assert chap1.sos_one_line(3) == 5
     assert chap1.sos_one_line(6) == 55
     assert chap1.sos_one_line(10) == 285
+
 
 def test_sos_odd():
     """R-1.6
@@ -91,6 +96,7 @@ def test_sos_odd():
     assert chap1.sos_odd(6) == 35
     assert chap1.sos_odd(10) == 165
 
+
 def test_sos_odd_one_line():
     """R-1.7
     Give a single command that computes the sum from Exercise R-1.6, relying
@@ -100,6 +106,7 @@ def test_sos_odd_one_line():
     assert chap1.sos_odd_one_line(3) == 1
     assert chap1.sos_odd_one_line(6) == 35
     assert chap1.sos_odd_one_line(10) == 165
+
 
 def test_string_index():
     """R-1.8
@@ -116,12 +123,14 @@ def test_string_index():
         for idx in range(len(string), 0, -1):
             assert string[chap1.string_index(-idx, string)] == string[-idx]
 
+
 def test_range_constructor9():
     """R-1.9
     What parameters should be sent to the range constructor, to produce a
     range with values 50, 60, 70, 80?
     """
     assert list(chap1.range_constructor9()) == [50, 60, 70, 80]
+
 
 def test_range_constructor10():
     """R-1.10
@@ -130,12 +139,14 @@ def test_range_constructor10():
     """
     assert list(chap1.range_constructor10()) == [8, 6, 4, 2, 0, -2, -4, -6, -8]
 
+
 def test_list_comprehension():
     """R-1.11
     Demonstrate how to use Python’s list comprehension syntax to produce
     the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
     """
     assert chap1.list_comprehension() == [1, 2, 4, 8, 16, 32, 64, 128, 256]
+
 
 def test_random_randrange():
     """R-1.12
@@ -155,7 +166,7 @@ def test_random_randrange():
     a2 = chap1.random_randrange(test_list)
     b2 = chap1.random_randrange(test_list)
     c2 = chap1.random_randrange(test_list)
-    assert (a,b,c) == (a2,b2,c2)
+    assert (a, b, c) == (a2, b2, c2)
 
 
 # %% Creativity Exercises
@@ -166,10 +177,11 @@ def test_reverse_list():
     were before, and compare this method to an equivalent Python function
     for doing the same thing.
     """
-    integer_list = list(range(0,10))
+    integer_list = list(range(0, 10))
     test_reverse = chap1.reverse_list(integer_list)
     integer_list.reverse()
-    assert  test_reverse == integer_list
+    assert test_reverse == integer_list
+
 
 def test_odd_pair():
     """C-1.14
@@ -184,14 +196,15 @@ def test_odd_pair():
     least two (unique) odd numbers in the sequence, the function should return
     True.
     """
-    alist = [1,2,3,4,5]
-    blist = [3,3,3,4,6,8,10]
-    clist = [10,20,30,40,50]
-    dlist = [9,7,7,4,16,22]
+    alist = [1, 2, 3, 4, 5]
+    blist = [3, 3, 3, 4, 6, 8, 10]
+    clist = [10, 20, 30, 40, 50]
+    dlist = [9, 7, 7, 4, 16, 22]
     assert chap1.odd_pair(alist)
     assert not chap1.odd_pair(blist)
     assert not chap1.odd_pair(clist)
     assert chap1.odd_pair(dlist)
+
 
 def test_check_unique():
     """C-1.15
@@ -199,14 +212,15 @@ def test_check_unique():
     if all the numbers are different from each other (that is, they are
     distinct).
     """
-    alist = [1,2,3,4,5]
-    blist = [3,3,3,4,6,8,10]
-    clist = [10,20,30,40,50]
-    dlist = [9,7,7,4,16,22]
+    alist = [1, 2, 3, 4, 5]
+    blist = [3, 3, 3, 4, 6, 8, 10]
+    clist = [10, 20, 30, 40, 50]
+    dlist = [9, 7, 7, 4, 16, 22]
     assert chap1.check_unique(alist)
     assert not chap1.check_unique(blist)
     assert chap1.check_unique(clist)
     assert not chap1.check_unique(dlist)
+
 
 def test_scale16():
     """C-1.16
@@ -236,6 +250,7 @@ def test_scale16():
     element at a given index."
     """
     assert chap1.scale16()
+
 
 def test_scale17():
     """C-1.17
@@ -268,12 +283,14 @@ def test_scale17():
     assert chap1.scale17(nums, factor) == nums
     assert chap1.scale17(nums, factor) != scaled_nums
 
+
 def test_list_comp18():
     """C-1.18
     Demonstrate how to use Python’s list comprehension syntax to produce
     the list [0, 2, 6, 12, 20, 30, 42, 56, 72, 90].
     """
     assert chap1.list_comp18() == [0, 2, 6, 12, 20, 30, 42, 56, 72, 90]
+
 
 def test_abc19():
     """C-1.19
@@ -283,6 +300,7 @@ def test_abc19():
     """
     expected = list('abcdefghijklmnopqrstuvwxyz')
     assert chap1.abc19() == expected
+
 
 def test_rand_shuffle():
     """C-1.20
@@ -301,6 +319,7 @@ def test_rand_shuffle():
     chap1.rand_shuffle(test_list)
     assert test_list == test_list2
 
+
 def test_user_input():
     """C-1.21
     Write a Python program that repeatedly reads lines from standard input
@@ -313,6 +332,7 @@ def test_user_input():
         reversed_output = chap1.user_input()
         assert reversed_output == ['you!', 'meet', 'Nice to', 'Hello, World!']
 
+
 def test_dot_product():
     """C-1.22
     Write a short Python program that takes two arrays a and b of length n
@@ -323,9 +343,11 @@ def test_dot_product():
     random.seed(45)
     a = array('i', random.sample(range(100), 10))
     b = array('i', random.sample(range(100), 10))
-    c = array('i', range(0,10))
+    c = array('i', range(0, 10))
     assert (chap1.dot_product(a, b) == np.multiply(a, b)).all()
-    assert chap1.dot_product(c, c) == array('i', [0, 1, 4, 9, 16, 25, 36, 49, 64, 81])
+    assert chap1.dot_product(c, c) == array('i', [0, 1, 4, 9, 16, 25, 36, 49,
+                                                  64, 81])
+
 
 def test_out_of_bounds():
     """C-1.23
@@ -341,6 +363,7 @@ def test_out_of_bounds():
     assert chap1.out_of_bounds(test_list, 5, 54) == [1, 5, 8, 27, 18]
     assert chap1.out_of_bounds(test_list, 0, 99) == [99, 5, 8, 27, 18]
 
+
 def test_count_vowels():
     """C-1.24
     Write a short Python function that counts the number of vowels in a given
@@ -348,6 +371,7 @@ def test_count_vowels():
     """
     string = 'Hello, World!  Nice to meet you!'
     assert chap1.count_vowels(string) == 10
+
 
 def test_remove_punctuation():
     """C-1.25
@@ -358,6 +382,7 @@ def test_remove_punctuation():
     """
     string = "Let's try, Mike."
     assert chap1.remove_punctuation(string) == "Lets try Mike"
+
 
 def test_correct_arithmetic():
     """C-1.26
@@ -375,38 +400,39 @@ def test_correct_arithmetic():
     possibilities to check for the 6 operators.
     """
     with patch('builtins.input') as mock_input:
-        mock_input.side_effect = ['1','2','3'] # Addition, left position
+        mock_input.side_effect = ['1', '2', '3']  # Addition, left position
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['1','0','1'] # Addition, right position
+        mock_input.side_effect = ['1', '0', '1']  # Addition, right position
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['2','3','-1'] # Subtraction, left position
+        mock_input.side_effect = ['2', '3', '-1']  # Subtraction, left position
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['2','3','1'] # Subtraction, right position
+        mock_input.side_effect = ['2', '3', '1']  # Subtraction, right position
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['2','2','4'] # Multiplication, left position
+        mock_input.side_effect = ['2', '2', '4']  # Multiplication, left pos
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['10','5','2'] # Multiplication, right pos
+        mock_input.side_effect = ['10', '5', '2']  # Multiplication, right pos
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['4','2','2'] # Division, left position
+        mock_input.side_effect = ['4', '2', '2']  # Division, left position
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['5','10','2'] # Division, right position
+        mock_input.side_effect = ['5', '10', '2']  # Division, right position
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['5','2','2'] # Integer div, left position
+        mock_input.side_effect = ['5', '2', '2']  # Integer div, left position
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['3','10','3'] # Integer div, right position
+        mock_input.side_effect = ['3', '10', '3']  # Integer div, right pos
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['5','2','1'] # Modulus, left position
+        mock_input.side_effect = ['5', '2', '1']  # Modulus, left position
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['3','8','5'] # Modulus, right position
+        mock_input.side_effect = ['3', '8', '5']  # Modulus, right position
         assert chap1.correct_arithmetic()
-        mock_input.side_effect = ['4','5','6'] # No valid operations
+        mock_input.side_effect = ['4', '5', '6']  # No valid operations
         assert not chap1.correct_arithmetic()
-        mock_input.side_effect = ['-2','2','5'] # No valid operations
+        mock_input.side_effect = ['-2', '2', '5']  # No valid operations
         assert not chap1.correct_arithmetic()
-        mock_input.side_effect = ['17','3','10'] # No valid operations
+        mock_input.side_effect = ['17', '3', '10']  # No valid operations
         assert not chap1.correct_arithmetic()
-        mock_input.side_effect = ['-2','0','11'] # No valid operations
+        mock_input.side_effect = ['-2', '0', '11']  # No valid operations
         assert not chap1.correct_arithmetic()
+
 
 def test_compute_factor():
     """C-1.27
@@ -418,7 +444,8 @@ def test_compute_factor():
     performance advantages.
     """
     n = 100
-    assert list(chap1.compute_factor(n)) == [1,2,4,5,10,20,25,50,100]
+    assert list(chap1.compute_factor(n)) == [1, 2, 4, 5, 10, 20, 25, 50, 100]
+
 
 def test_p_norm():
     """C-1.28
@@ -454,6 +481,7 @@ def test_catdog():
     assert len(permutations) == 720
     assert len(permutations) == len(set(permutations))
 
+
 def test_two_divider():
     """P-1.30
     Write a Python program that can take a positive integer greater than 2
@@ -471,6 +499,7 @@ def test_two_divider():
     assert chap1.two_divider(8) == 3
     assert chap1.two_divider(100) == 6
     assert chap1.two_divider(1000) == 9
+
 
 def test_make_change():
     """P-1.31
@@ -497,14 +526,15 @@ def test_make_change():
     expected1 = {'1_dollar': 3, 'dime': 2, 'penny': 1, 'Total change': '$3.21'}
     result2 = chap1.make_change(19.99, 100)
     expected2 = {
-        '50_dollar'     : 1,
-        '20_dollar'     : 1,
-        '10_dollar'     : 1,
-        'penny'         : 1,
-        'Total change'  : '$80.01'
+        '50_dollar':      1,
+        '20_dollar':      1,
+        '10_dollar':      1,
+        'penny':          1,
+        'Total change':   '$80.01'
     }
     assert result1 == expected1
     assert result2 == expected2
+
 
 def test_simple_calculator(capsys):
     """P-1.32
@@ -522,27 +552,28 @@ def test_simple_calculator(capsys):
     exercise will allow the user to manually clear memory.
     """
     with patch('builtins.input') as mock_input:
-        mock_input.side_effect = ['4','*','21', '=', 'q']
+        mock_input.side_effect = ['4', '*', '21', '=', 'q']
         chap1.simple_calculator()
         captured = capsys.readouterr()
         assert "= 84\n" in captured.out
-        mock_input.side_effect = ['59','-','65', '=', 'q']
+        mock_input.side_effect = ['59', '-', '65', '=', 'q']
         chap1.simple_calculator()
         captured = capsys.readouterr()
         assert "= -6\n" in captured.out
-        mock_input.side_effect = ['10','/','3', '=', 'q']
+        mock_input.side_effect = ['10', '/', '3', '=', 'q']
         chap1.simple_calculator()
         captured = capsys.readouterr()
         assert "= 3.3333\n" in captured.out
-        mock_input.side_effect = ['1','/','8', '=', 'q']
+        mock_input.side_effect = ['1', '/', '8', '=', 'q']
         chap1.simple_calculator()
         captured = capsys.readouterr()
         assert "= 0.125\n" in captured.out
-        mock_input.side_effect = ['5','+','4','+','3','+','2','+','1','=','q']
+        mock_input.side_effect = ['5', '+', '4', '+', '3', '+', '2', '+', '1',
+                                  '=', 'q']
         chap1.simple_calculator()
         captured = capsys.readouterr()
         assert "= 15\n" in captured.out
-        mock_input.side_effect = ['5','*','+', 'q']
+        mock_input.side_effect = ['5', '*', '+', 'q']
         chap1.simple_calculator()
         captured = capsys.readouterr()
         assert "Invalid input!" in captured.out
@@ -565,25 +596,25 @@ def test_handheld_calculator(capsys):
     by the user.
     """
     with patch('builtins.input') as mock_input:
-        mock_input.side_effect = ['36','*','10', '=', 'q']
+        mock_input.side_effect = ['36', '*', '10', '=', 'q']
         chap1.handheld_calculator()
         captured = capsys.readouterr()
         assert "= 360\n" in captured.out
-        mock_input.side_effect = ['36','*','10','=','/','12','/','5','=',
-                                  '/','3','=','q']
+        mock_input.side_effect = ['36', '*', '10', '=', '/', '12', '/', '5',
+                                  '=', '/', '3', '=', 'q']
         chap1.handheld_calculator()
         captured = capsys.readouterr()
         assert "= 2\n" in captured.out
-        mock_input.side_effect = ['5','+','17','=','cls','45','-','18.5','=',
-                                  'q']
+        mock_input.side_effect = ['5', '+', '17', '=', 'cls', '45', '-',
+                                  '18.5', '=', 'q']
         chap1.handheld_calculator()
         captured = capsys.readouterr()
         assert "= 26.5\n" in captured.out
-        mock_input.side_effect = ['10','/','3', '=', 'q']
+        mock_input.side_effect = ['10', '/', '3', '=', 'q']
         chap1.handheld_calculator()
         captured = capsys.readouterr()
         assert "= 3.3333\n" in captured.out
-        mock_input.side_effect = ['5','*','+', 'q']
+        mock_input.side_effect = ['5', '*', '+', 'q']
         chap1.handheld_calculator()
         captured = capsys.readouterr()
         assert "Invalid input!" in captured.out
@@ -591,6 +622,7 @@ def test_handheld_calculator(capsys):
         chap1.handheld_calculator()
         captured = capsys.readouterr()
         assert "Invalid input!" in captured.out
+
 
 def test_punishment():
     """P-1.34
@@ -612,7 +644,8 @@ def test_punishment():
     result = chap1.punishment()
     numberless = [x[-35:] for x in result]
     assert len(result) == 100
-    assert len(set(numberless)) == 9 # Original sentence plus 8 with typos
+    assert len(set(numberless)) == 9  # Original sentence plus 8 with typos
+
 
 def test_birthday_paradox():
     """P-1.35
@@ -640,6 +673,7 @@ def test_birthday_paradox():
     assert chap1.birthday_paradox(30) > 0.5
     assert chap1.birthday_paradox(50) > 0.5
     assert chap1.birthday_paradox(100) > 0.5
+
 
 def test_count_words():
     """P-1.36

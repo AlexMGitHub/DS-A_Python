@@ -29,6 +29,7 @@ def is_multiple(n, m):
     """
     return n % m == 0
 
+
 def is_even(k):
     """R-1.2
     Takes an integer value and returns True if k is even, and False
@@ -38,6 +39,7 @@ def is_even(k):
     k_str = str(k)
     last_digit = int(k_str[-1])
     return last_digit in [0, 2, 4, 6, 8]
+
 
 def minmax(data):
     """R-1.3
@@ -54,22 +56,25 @@ def minmax(data):
             min_idx = idx
     return (data[min_idx], data[max_idx])
 
+
 def sum_of_squares(n):
     """R-1.4
     Takes a positive integer n and returns the sum of the squares of all the
     positive integers smaller than n.
     """
     squares = 0
-    for num in range(1,n):
+    for num in range(1, n):
         squares += num ** 2
     return squares
+
 
 def sos_one_line(n):
     """R-1.5
     Give a single command that computes the sum from Exercise R-1.4, relying
     on Python’s comprehension syntax and the built-in sum function.
     """
-    return sum([num ** 2 for num in range(1,n)])
+    return sum([num ** 2 for num in range(1, n)])
+
 
 def sos_odd(n):
     """R-1.6
@@ -77,16 +82,18 @@ def sos_odd(n):
     the sum of the squares of all the odd positive integers smaller than n.
     """
     squares = 0
-    for num in range(1,n,2):
+    for num in range(1, n, 2):
         squares += num ** 2
     return squares
+
 
 def sos_odd_one_line(n):
     """R-1.7
     Give a single command that computes the sum from Exercise R-1.6, relying
     on Python’s comprehension syntax and the built-in sum function.
     """
-    return sum([num ** 2 for num in range(1,n,2)])
+    return sum([num ** 2 for num in range(1, n, 2)])
+
 
 def string_index(neg_idx, string):
     """R-1.8
@@ -98,12 +105,14 @@ def string_index(neg_idx, string):
     n = len(string)
     return n + neg_idx
 
+
 def range_constructor9():
     """R-1.9
     What parameters should be sent to the range constructor, to produce a
     range with values 50, 60, 70, 80?
     """
     return range(50, 90, 10)
+
 
 def range_constructor10():
     """R-1.10
@@ -112,12 +121,14 @@ def range_constructor10():
     """
     return range(8, -10, -2)
 
+
 def list_comprehension():
     """R-1.11
     Demonstrate how to use Python’s list comprehension syntax to produce
     the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
     """
-    return [2 ** x for x in range(0,9)]
+    return [2 ** x for x in range(0, 9)]
+
 
 def random_randrange(test_list):
     """R-1.12
@@ -142,6 +153,7 @@ def reverse_list(integer_list):
     """
     return integer_list[::-1]
 
+
 def odd_pair(nums):
     """C-1.14
     Write a short Python function that takes a sequence of integer values and
@@ -164,6 +176,7 @@ def odd_pair(nums):
                 break
     return odd_count > 1
 
+
 def check_unique(nums):
     """C-1.15
     Write a Python function that takes a sequence of numbers and determines
@@ -171,6 +184,7 @@ def check_unique(nums):
     distinct).
     """
     return len(nums) == len(set(nums))
+
 
 def scale16():
     """C-1.16
@@ -201,6 +215,7 @@ def scale16():
     """
     return True
 
+
 def scale17(data, factor):
     """C-1.17
     Had we implemented the scale function (page 25) as follows, does it work
@@ -230,12 +245,14 @@ def scale17(data, factor):
         val *= factor
     return data
 
+
 def list_comp18():
     """C-1.18
     Demonstrate how to use Python’s list comprehension syntax to produce
     the list [0, 2, 6, 12, 20, 30, 42, 56, 72, 90].
     """
     return [x * (x+1) for x in range(10)]
+
 
 def abc19():
     """C-1.19
@@ -245,6 +262,7 @@ def abc19():
     """
     a_idx = 97
     return [chr(a_idx + x) for x in range(26)]
+
 
 def rand_shuffle(test_list):
     """C-1.20
@@ -257,8 +275,9 @@ def rand_shuffle(test_list):
     """
     # Implementing Fisher-Yates shuffle
     for idx in range(len(test_list)-1, 1, -1):
-        n = random.randint(0, idx) # Upper bound is inclusive
+        n = random.randint(0, idx)  # Upper bound is inclusive
         test_list[idx], test_list[n] = test_list[n], test_list[idx]
+
 
 def user_input():
     """C-1.21
@@ -278,6 +297,7 @@ def user_input():
         print(line)
     return lines
 
+
 def dot_product(a, b):
     """C-1.22
     Write a short Python program that takes two arrays a and b of length n
@@ -285,7 +305,8 @@ def dot_product(a, b):
     returns an array c of length n such that c[i] = a[i] · b[i], for i = 0, .
     . . , n − 1.
     """
-    return array('i', [x*y for x,y in zip(a,b)])
+    return array('i', [x * y for x, y in zip(a, b)])
+
 
 def out_of_bounds(test_list, idx, val):
     """C-1.23
@@ -301,6 +322,7 @@ def out_of_bounds(test_list, idx, val):
         print("Don't try buffer overflow attacks in Python!")
     return test_list
 
+
 def count_vowels(string):
     """C-1.24
     Write a short Python function that counts the number of vowels in a given
@@ -312,6 +334,7 @@ def count_vowels(string):
         if char in vowel_list:
             count += 1
     return count
+
 
 def remove_punctuation(string):
     """C-1.25
@@ -326,6 +349,7 @@ def remove_punctuation(string):
         if char not in punctuation_list:
             new_string += char
     return new_string
+
 
 def correct_arithmetic():
     """C-1.26
@@ -360,12 +384,13 @@ def correct_arithmetic():
         'a == b % c'
     ]
     for condition in conditions:
-        try:                    # Handle divide-by-zero errors
-            if eval(condition): # eval() is considered unsafe to use
+        try:                     # Handle divide-by-zero errors
+            if eval(condition):  # eval() is considered unsafe to use
                 return True
         except ZeroDivisionError:
             pass
     return False
+
 
 def compute_factor(n):
     """C-1.27
@@ -397,6 +422,7 @@ def compute_factor(n):
             yield n // k
         k = k - 1
 
+
 def p_norm(vector, p=2):
     """C-1.28
     Give an implementation of a function named norm such that norm(v, p)
@@ -421,15 +447,17 @@ def catdog(char_list):
     """
     str_container = []
     n = len(char_list)
+
     def permutations(chars, step=0):
         if step == n:
             str_container.append("".join(chars))
         for idx in range(step, n):
-            c_copy = chars.copy() # Pass copy to avoid swapping same list
+            c_copy = chars.copy()  # Pass copy to avoid swapping same list
             c_copy[idx], c_copy[step] = c_copy[step], c_copy[idx]
             permutations(c_copy, step+1)
     permutations(char_list)
     return str_container
+
 
 def two_divider(num):
     """P-1.30
@@ -439,7 +467,8 @@ def two_divider(num):
     """
     if not isinstance(num, int) or (num < 3):
         raise ValueError
-    return int(math.log(num,2))
+    return int(math.log(num, 2))
+
 
 def make_change(charged, given):
     """P-1.31
@@ -464,17 +493,17 @@ def make_change(charged, given):
     assert given > charged, 'Insufficient or exact payment'
     float_dict = {
         '100_dollar': 100,
-        '50_dollar' : 50,
-        '20_dollar' : 20,
-        '10_dollar' : 10,
-        '5_dollar'  : 5,
-        '1_dollar'  : 1,
-        'quarter'   : 0.25,
-        'dime'      : 0.10,
-        'nickel'    : 0.05,
-        'penny'     : 0.01
+        '50_dollar':  50,
+        '20_dollar':  20,
+        '10_dollar':  10,
+        '5_dollar':   5,
+        '1_dollar':   1,
+        'quarter':    0.25,
+        'dime':       0.10,
+        'nickel':     0.05,
+        'penny':      0.01
     }
-    currency_dict = {k : Decimal(str(v)) for k, v in float_dict.items()}
+    currency_dict = {k: Decimal(str(v)) for k, v in float_dict.items()}
     change_dict = {}
     expected_change = given - charged
     change_returned = Decimal(str('0'))
@@ -484,6 +513,7 @@ def make_change(charged, given):
             change_dict[currency] = change_dict.get(currency, 0) + 1
     change_dict['Total change'] = f'${change_returned:,.2f}'
     return change_dict
+
 
 def simple_calculator():
     """P-1.32
@@ -552,7 +582,7 @@ def simple_calculator():
             button_history.append(button)
             print(button)
         elif (is_number(button) and (button_history[-1] in operator_list)) or\
-            ((button in operator_list) and is_number(button_history[-1])):
+                ((button in operator_list) and is_number(button_history[-1])):
             button_history.append(button)
             print(button)
         elif button == '=' and is_number(button_history[-1]):
@@ -562,6 +592,7 @@ def simple_calculator():
             done = True
         else:
             print('Invalid input!')
+
 
 def handheld_calculator():
     """P-1.33
@@ -634,7 +665,7 @@ def handheld_calculator():
         elif (button in operator_list) and len(button_history) == 0:
             print('Invalid input!')
         elif (is_number(button) and (button_history[-1] in operator_list)) or\
-            ((button in operator_list) and is_number(button_history[-1])):
+                ((button in operator_list) and is_number(button_history[-1])):
             button_history.append(button)
             print(button)
         elif button == '=' and is_number(button_history[-1]):
@@ -646,6 +677,7 @@ def handheld_calculator():
             done = True
         else:
             print('Invalid input!')
+
 
 def punishment():
     """P-1.34
@@ -667,18 +699,19 @@ def punishment():
     sentences = [sentence] * 100
     indices = random.sample(range(100), 8)
     for idx in indices:
-        idx = int(idx) # Avoid E1126 false positive from pylint
+        idx = int(idx)  # Avoid E1126 false positive from pylint
         done = False
         while not done:
             swap1, swap2 = random.sample(range(len(sentence)), 2)
-            swap1, swap2 = int(swap1), int(swap2) # Avoid E1126
+            swap1, swap2 = int(swap1), int(swap2)  # Avoid E1126
             temp = list(sentences[idx])
             temp[swap1], temp[swap2] = temp[swap2], temp[swap1]
             temp_string = ''.join(temp)
             if temp_string not in sentences:
                 sentences[idx] = temp_string
                 done = True
-    return [f'{x}. ' + words for x, words in zip(range(1,101), sentences)]
+    return [f'{x}. ' + words for x, words in zip(range(1, 101), sentences)]
+
 
 def birthday_paradox(n, num_trials=10000):
     """P-1.35
@@ -706,6 +739,7 @@ def birthday_paradox(n, num_trials=10000):
         if len(set(birthdays)) < len(birthdays):
             same_bday_count += 1
     return same_bday_count / num_trials
+
 
 def count_words(sentence):
     """P-1.36
