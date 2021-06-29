@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+"""Test solutions to chapter 1 exercises.
+
 ###############################################################################
 # test_chapter1.py
 #
@@ -30,7 +31,8 @@ import dsa.chapter1_exercises as chap1
 
 # %% Reinforcement Exercises
 def test_is_multiple():
-    """R-1.1
+    """Solution to exercise R-1.1.
+
     Returns True if n is a multiple of m, that is, n = mi for some integer i,
     and False otherwise.
     """
@@ -41,7 +43,8 @@ def test_is_multiple():
 
 
 def test_is_even():
-    """R-1.2
+    """Solution to exercise R-1.2.
+
     Takes an integer value and returns True if k is even, and False otherwise.
     However, the function cannot use the multiplication, modulo, or division
     operators.
@@ -55,7 +58,8 @@ def test_is_even():
 
 
 def test_minmax():
-    """R-1.3
+    """Solution to exercise R-1.3.
+
     Takes a sequence of one or more numbers, and returns the smallest and
     largest numbers, in the form of a tuple of length two. Do not use the
     built-in functions min or max in implementing the solution.
@@ -70,7 +74,8 @@ def test_minmax():
 
 
 def test_sum_of_squares():
-    """R-1.4
+    """Solution to exercise R-1.4.
+
     Takes a positive integer n and returns the sum of the squares of all the
     positive integers smaller than n.
     """
@@ -81,7 +86,8 @@ def test_sum_of_squares():
 
 
 def test_sos_one_line():
-    """R-1.5
+    """Solution to exercise R-1.5.
+
     Give a single command that computes the sum from Exercise R-1.4, relying
     on Python’s comprehension syntax and the built-in sum function.
     """
@@ -92,7 +98,8 @@ def test_sos_one_line():
 
 
 def test_sos_odd():
-    """R-1.6
+    """Solution to exercise R-1.6.
+
     Write a short Python function that takes a positive integer n and returns
     the sum of the squares of all the odd positive integers smaller than n.
     """
@@ -103,7 +110,8 @@ def test_sos_odd():
 
 
 def test_sos_odd_one_line():
-    """R-1.7
+    """Solution to exercise R-1.7.
+
     Give a single command that computes the sum from Exercise R-1.6, relying
     on Python’s comprehension syntax and the built-in sum function.
     """
@@ -114,7 +122,8 @@ def test_sos_odd_one_line():
 
 
 def test_string_index():
-    """R-1.8
+    """Solution to exercise R-1.8.
+
     Python allows negative integers to be used as indices into a sequence,
     such as a string. If string s has length n, and expression s[k] is used for
     index −n ≤ k < 0, what is the equivalent index j ≥ 0 such that s[j]
@@ -130,7 +139,8 @@ def test_string_index():
 
 
 def test_range_constructor9():
-    """R-1.9
+    """Solution to exercise R-1.9.
+
     What parameters should be sent to the range constructor, to produce a
     range with values 50, 60, 70, 80?
     """
@@ -138,7 +148,8 @@ def test_range_constructor9():
 
 
 def test_range_constructor10():
-    """R-1.10
+    """Solution to exercise R-1.10.
+
     What parameters should be sent to the range constructor, to produce a
     range with values 8, 6, 4, 2, 0, −2, −4, −6, −8?
     """
@@ -146,7 +157,8 @@ def test_range_constructor10():
 
 
 def test_list_comprehension():
-    """R-1.11
+    """Solution to exercise R-1.11.
+
     Demonstrate how to use Python’s list comprehension syntax to produce
     the list [1, 2, 4, 8, 16, 32, 64, 128, 256].
     """
@@ -154,7 +166,8 @@ def test_list_comprehension():
 
 
 def test_random_randrange():
-    """R-1.12
+    """Solution to exercise R-1.12.
+
     Python’s random module includes a function choice(data) that returns a
     random element from a non-empty sequence. The random module in-
     cludes a more basic function randrange, with parameterization similar to
@@ -176,7 +189,8 @@ def test_random_randrange():
 
 # %% Creativity Exercises
 def test_reverse_list():
-    """C-1.13
+    """Solution to exercise C-1.13.
+
     Write a pseudo-code description of a function that reverses a list of n
     integers, so that the numbers are listed in the opposite order than they
     were before, and compare this method to an equivalent Python function
@@ -189,7 +203,8 @@ def test_reverse_list():
 
 
 def test_odd_pair():
-    """C-1.14
+    """Solution to exercise C-1.14.
+
     Write a short Python function that takes a sequence of integer values and
     determines if there is a distinct pair of numbers in the sequence whose
     product is odd.
@@ -212,7 +227,8 @@ def test_odd_pair():
 
 
 def test_check_unique():
-    """C-1.15
+    """Solution to exercise C-1.15.
+
     Write a Python function that takes a sequence of numbers and determines
     if all the numbers are different from each other (that is, they are
     distinct).
@@ -228,7 +244,8 @@ def test_check_unique():
 
 
 def test_scale16():
-    """C-1.16
+    """Solution to exercise C-1.16.
+
     In our implementation of the scale function (page 25), the body of the loop
     executes the command data[j] *= factor. We have discussed that numeric
     types are immutable, and that use of the *= operator in this context causes
@@ -258,7 +275,8 @@ def test_scale16():
 
 
 def test_scale17():
-    """C-1.17
+    """Solution to exercise C-1.17.
+
     Had we implemented the scale function (page 25) as follows, does it work
     properly?
 
@@ -290,7 +308,8 @@ def test_scale17():
 
 
 def test_list_comp18():
-    """C-1.18
+    """Solution to exercise C-1.18.
+
     Demonstrate how to use Python’s list comprehension syntax to produce
     the list [0, 2, 6, 12, 20, 30, 42, 56, 72, 90].
     """
@@ -298,7 +317,8 @@ def test_list_comp18():
 
 
 def test_abc19():
-    """C-1.19
+    """Solution to exercise C-1.19.
+
     Demonstrate how to use Python’s list comprehension syntax to produce
     the list [ a , b , c , ..., z ], but without having to type all 26 such
     characters literally.
@@ -308,7 +328,8 @@ def test_abc19():
 
 
 def test_rand_shuffle():
-    """C-1.20
+    """Solution to exercise C-1.20.
+
     Python’s random module includes a function shuffle(data) that accepts a
     list of elements and randomly reorders the elements so that each possi-
     ble order occurs with equal probability. The random module includes a
@@ -326,7 +347,8 @@ def test_rand_shuffle():
 
 
 def test_user_input():
-    """C-1.21
+    """Solution to exercise C-1.21.
+
     Write a Python program that repeatedly reads lines from standard input
     until an EOFError is raised, and then outputs those lines in reverse order
     (a user can indicate end of input by typing ctrl-D).
@@ -339,7 +361,8 @@ def test_user_input():
 
 
 def test_dot_product():
-    """C-1.22
+    """Solution to exercise C-1.22.
+
     Write a short Python program that takes two arrays a and b of length n
     storing int values, and returns the dot product of a and b. That is, it
     returns an array c of length n such that c[i] = a[i] · b[i], for i = 0, .
@@ -355,7 +378,8 @@ def test_dot_product():
 
 
 def test_out_of_bounds():
-    """C-1.23
+    """Solution to exercise C-1.23.
+
     Give an example of a Python code fragment that attempts to write an ele-
     ment to a list based on an index that may be out of bounds. If that index
     is out of bounds, the program should catch the exception that results, and
@@ -370,7 +394,8 @@ def test_out_of_bounds():
 
 
 def test_count_vowels():
-    """C-1.24
+    """Solution to exercise C-1.24.
+
     Write a short Python function that counts the number of vowels in a given
     character string.
     """
@@ -379,7 +404,8 @@ def test_count_vowels():
 
 
 def test_remove_punctuation():
-    """C-1.25
+    """Solution to exercise C-1.25.
+
     Write a short Python function that takes a string s, representing a
     sentence, and returns a copy of the string with all punctuation removed.
     For example, if given the string "Let s try, Mike.", this function would
@@ -390,7 +416,8 @@ def test_remove_punctuation():
 
 
 def test_correct_arithmetic():
-    """C-1.26
+    """Solution to exercise C-1.26.
+
     Write a short program that takes as input three integers, a, b, and c, from
     the console and determines if they can be used in a correct arithmetic
     formula (in the given order), like “a + b = c,” “a = b − c,”
@@ -440,7 +467,8 @@ def test_correct_arithmetic():
 
 
 def test_compute_factor():
-    """C-1.27
+    """Solution to exercise C-1.27.
+
     In Section 1.8, we provided three different implementations of a generator
     that computes factors of a given integer. The third of those
     implementations, from page 41, was the most efficient, but we noted that
@@ -453,7 +481,8 @@ def test_compute_factor():
 
 
 def test_p_norm():
-    """C-1.28
+    """Solution to exercise C-1.28.
+
     Give an implementation of a function named norm such that norm(v, p)
     returns the p-norm value of v and norm(v) returns the Euclidean norm of v.
     You may assume that v is a list of numbers.
@@ -467,7 +496,8 @@ def test_p_norm():
 
 # %% Project Exercises
 def test_catdog():
-    """P-1.29
+    """Solution to exercise P-1.29.
+
     Write a Python program that outputs all possible strings formed by using
     the characters c , a , t , d , o , and g exactly once.
 
@@ -488,7 +518,8 @@ def test_catdog():
 
 
 def test_two_divider():
-    """P-1.30
+    """Solution to exercise P-1.30.
+
     Write a Python program that can take a positive integer greater than 2
     as input and write out the number of times one must repeatedly divide
     this number by 2 before getting a value less than 2.
@@ -507,7 +538,8 @@ def test_two_divider():
 
 
 def test_make_change():
-    """P-1.31
+    """Solution to exercise P-1.31.
+
     Write a Python program that can “make change.” Your program should
     take two numbers as input, one that is a monetary amount charged and the
     other that is a monetary amount given. It should then return the number
@@ -542,7 +574,8 @@ def test_make_change():
 
 
 def test_simple_calculator(capsys):
-    """P-1.32
+    """Solution to exercise P-1.32.
+
     Write a Python program that can simulate a simple calculator, using the
     console as the exclusive input and output device. That is, each input to
     the calculator, be it a number, like 12.34 or 1034, or an operator, like +
@@ -585,7 +618,8 @@ def test_simple_calculator(capsys):
 
 
 def test_handheld_calculator(capsys):
-    """P-1.33
+    """Solution to exercise P-1.33.
+
     Write a Python program that simulates a handheld calculator. Your pro-
     gram should process input from the Python console representing buttons
     that are “pushed,” and then output the contents of the screen after each
@@ -630,7 +664,8 @@ def test_handheld_calculator(capsys):
 
 
 def test_punishment():
-    """P-1.34
+    """Solution to exercise P-1.34.
+
     A common punishment for school children is to write out a sentence mul-
     tiple times. Write a Python stand-alone program that will write out the
     following sentence one hundred times: “I will never spam my friends
@@ -653,7 +688,8 @@ def test_punishment():
 
 
 def test_birthday_paradox():
-    """P-1.35
+    """Solution to exercise P-1.35..
+
     The birthday paradox says that the probability that two people in a room
     will have the same birthday is more than half, provided n, the number of
     people in the room, is more than 23. This property is not really a paradox,
@@ -681,7 +717,8 @@ def test_birthday_paradox():
 
 
 def test_count_words():
-    """P-1.36
+    """Solution to exercise P-1.36..
+
     Write a Python program that inputs a list of words, separated by white-
     space, and outputs how many times each word appears in the list. You
     need not worry about efficiency at this point, however, as this topic is

@@ -3,3 +3,4 @@ pylint
 -e .
 numpy
 pytest-cov
+matplotlib

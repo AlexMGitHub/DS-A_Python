@@ -2,3 +2,4 @@ htmlcov/
 *.pyc
 *.egg*
 .coverage
+.vscode/

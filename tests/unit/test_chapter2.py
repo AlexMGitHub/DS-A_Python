@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+"""Test solutions to chapter 2 exercises.
+
 ###############################################################################
 # test_chapter2.py
 #
@@ -24,8 +25,10 @@ import dsa.chapter2_exercises as chap2
 
 # %% Reinforcement Exercises
 def test_life_critical():
-    """R-2.1
+    """Solution to exercise R-2.1.
+
     Give three examples of life-critical software applications.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
@@ -37,9 +40,11 @@ def test_life_critical():
 
 
 def test_adaptability():
-    """R-2.2
+    """Solution to exercise R-2.2.
+
     Give an example of a software application in which adaptability can mean
     the difference between a prolonged lifetime of sales and bankruptcy.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
@@ -50,9 +55,11 @@ def test_adaptability():
 
 
 def test_text_editor():
-    """R-2.3
+    """Solution to exercise R-2.3.
+
     Describe a component from a text-editor GUI and the methods that it
     encapsulates.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
@@ -67,7 +74,8 @@ def test_text_editor():
 
 
 class TestFlower():
-    """R-2.4
+    """Solution to exercise R-2.4.
+
     Write a Python class, Flower, that has three instance variables of type
     str, int, and float, that respectively represent the name of the flower,
     its number of petals, and its price. Your class must include a constructor
@@ -116,7 +124,8 @@ class TestFlower():
 
 
 def test_credit_card():
-    """R-2.5
+    """Solution to exercise R-2.5.
+
     Use the techniques of Section 1.7 to revise the charge and make payment
     methods of the CreditCard class to ensure that the caller sends a number
     as a parameter.

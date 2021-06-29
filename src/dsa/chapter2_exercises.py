@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
+"""Solutions to chapter 2 exercises.
+
 ###############################################################################
 # chapter2_exercises.py
 #
@@ -19,8 +20,10 @@
 
 # %% Reinforcement Exercises
 def life_critical():
-    """R-2.1
+    """Solution to exercise R-2.1.
+
     Give three examples of life-critical software applications.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
@@ -32,9 +35,11 @@ def life_critical():
 
 
 def adaptability():
-    """R-2.2
+    """Solution to exercise R-2.2.
+
     Give an example of a software application in which adaptability can mean
     the difference between a prolonged lifetime of sales and bankruptcy.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
@@ -45,9 +50,11 @@ def adaptability():
 
 
 def text_editor():
-    """R-2.3
+    """Solution to exercise R-2.3.
+
     Describe a component from a text-editor GUI and the methods that it
     encapsulates.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
@@ -62,7 +69,8 @@ def text_editor():
 
 
 class Flower:
-    """R-2.4
+    """Solution to exercise R-2.4.
+
     Write a Python class, Flower, that has three instance variables of type
     str, int, and float, that respectively represent the name of the flower,
     its number of petals, and its price. Your class must include a constructor
@@ -72,6 +80,7 @@ class Flower:
     """
 
     def __init__(self, name, num_petals, price):
+        """Initialize instance of Flower class."""
         assert isinstance(name, str), 'Name must be string'
         assert isinstance(num_petals, int), 'Number of petals must be integer'
         assert isinstance(price, float), 'Price must be a float'
@@ -108,7 +117,8 @@ class Flower:
 
 
 class CreditCard:
-    """R-2.5
+    """Solution to exercise R-2.5.
+
     Use the techniques of Section 1.7 to revise the charge and make payment
     methods of the CreditCard class to ensure that the caller sends a number
     as a parameter.
@@ -116,6 +126,7 @@ class CreditCard:
 
     def __init__(self, customer, bank, acnt, limit):
         """Create a new credit card instance.
+
         The initial balance is zero.
         customer  the name of the customer (e.g., 'John Bowman')
         bank      the name of the bank (e.g., 'California Savings')
@@ -151,6 +162,7 @@ class CreditCard:
 
     def charge(self, price):
         """Charge given price to the card, assuming sufficient credit limit.
+
         Return True if charge was processed; False if charge was denied.
         """
         if not isinstance(price, (int, float)):
