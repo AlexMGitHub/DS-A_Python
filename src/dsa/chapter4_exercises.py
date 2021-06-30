@@ -383,7 +383,7 @@ def summation_puzzle(words):
     return recurse(n, [], digit_list)
 
 
-def os_walk(path_str, topdown=False):
+def os_walk(path_str):
     """Solution to exercise P-4.27.
 
     Python’s os module provides a function with signature walk(path) that
@@ -422,6 +422,4 @@ def os_walk(path_str, topdown=False):
         results.append((str(path), dirs, files))
 
     walk(path)
-    if topdown:
-        results.reverse()  # os.walk defaults to topdown = True
     return results

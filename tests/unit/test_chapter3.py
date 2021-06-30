@@ -93,6 +93,31 @@ def test_r_3p3():
     assert algorithm_a(n0-1) > algorithm_b(n0-1)
 
 
+def test_log_log_scale():
+    """Solution to exercise R-3.5.
+
+    Explain why the plot of the function n^c is a straight line with slope c
+    on a log-log scale.
+    --------------------------------------------------------------------------
+    Solution:
+    --------------------------------------------------------------------------
+    The log-log plot takes the log of both x and f(x), such that the x-axis
+    will be log(n) and the y-axis will be log(n^c).
+
+    From rule 3 of Proposition 3.1:
+    logb(a^c) = c * logb(a)
+
+    Therefore:
+    log(n^c) = c * log(n)
+
+    And the log-log plot will have a slope (rise over run) of:
+    c * log(n) / log(n)
+
+    Which results in a constant, straight line slope of c.
+    """
+    assert chap3.log_log_scale()
+
+
 def test_sum_of_even_nums():
     """Solution to exercise R-3.6.
 
