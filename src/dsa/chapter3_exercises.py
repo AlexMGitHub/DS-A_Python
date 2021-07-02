@@ -16,9 +16,13 @@
 """
 
 # %% Imports
+# Standard system imports
+
 # Related third party imports
 import numpy as np
 import matplotlib.pyplot as plt
+
+# Local application/library specific imports
 
 
 # %% Reinforcement Exercises

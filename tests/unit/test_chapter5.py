@@ -3,7 +3,7 @@
 """Test solutions to chapter 5 exercises.
 
 ###############################################################################
-# test_chapter4.py
+# test_chapter5.py
 #
 # Revision:     1.00
 # Date:         6/29/2021

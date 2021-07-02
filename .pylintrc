@@ -465,12 +465,14 @@ good-names=i,
            p,
            e,
            S,
+           T,
            U,
            n1,
            n2,
            k1,
            cc,
-           n0
+           n0,
+           op
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted

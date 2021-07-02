@@ -16,8 +16,9 @@
 """
 
 # %% Imports
+# Standard system imports
+
 # Related third party imports
-# import pytest
 import numpy as np
 
 # Local application/library specific imports

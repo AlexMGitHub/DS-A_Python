@@ -18,6 +18,10 @@
 # %% Imports
 # Standard system imports
 
+# Related third party imports
+
+# Local application/library specific imports
+
 
 # %% Reinforcement Exercises
 def sum_matrix(list2d):
