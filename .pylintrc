@@ -472,7 +472,15 @@ good-names=i,
            k1,
            cc,
            n0,
-           op
+           op,
+           L,
+           M,
+           L_prime,
+           M2,
+           L2,
+           M_head,
+           L_tail,
+           L_head
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted
@@ -540,7 +548,21 @@ exclude-protected=_asdict,
                   _fields,
                   _replace,
                   _source,
-                  _make
+                  _make,
+                  _data,
+                  _front,
+                  _back,
+                  _next,
+                  _size,
+                  _prev,
+                  _head,
+                  _tail,
+                  _element,
+                  _list,
+                  _node,
+                  _header,
+                  _trailer,
+                  _value
 
 # List of valid names for the first argument in a class method.
 valid-classmethod-first-arg=cls

@@ -739,8 +739,9 @@ class ArrayDeque:
             raise Empty('Queue is empty')
         answer = self._data[self._front]
         self._data[self._front] = None      # help garbage collection
-        self._front = (self._front + 1) % len(self._data)
         self._size -= 1
+        if self._size > 0:  # If last item removed front does not move
+            self._front = (self._front + 1) % len(self._data)
         return answer
 
     def delete_last(self):
@@ -752,8 +753,9 @@ class ArrayDeque:
             raise Empty('Queue is empty')
         answer = self._data[self._back]
         self._data[self._back] = None      # help garbage collection
-        self._back = (self._back - 1) % len(self._data)
         self._size -= 1
+        if self._size > 0:  # If last item removed back does not move
+            self._back = (self._back - 1) % len(self._data)
         return answer
 
     def add_first(self, e):

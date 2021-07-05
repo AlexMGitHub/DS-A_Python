@@ -52,6 +52,7 @@ def r_3p2():
 
     The number of operations executed by algorithms A and B is 8n*logn and
     2n^2, respectively. Determine n_0 such that A is better than B for n ≥ n_0.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
@@ -73,6 +74,7 @@ def r_3p3():
 
     The number of operations executed by algorithms A and B is 40n^2 and
     2n^3, respectively. Determine n_0 such that A is better than B for n ≥ n_0.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
@@ -89,6 +91,7 @@ def log_log_scale():
 
     Explain why the plot of the function n^c is a straight line with slope c
     on a log-log scale.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
@@ -114,6 +117,7 @@ def sum_of_even_nums(n):
 
     What is the sum of all the even numbers from 0 to 2n, for any positive
     integer n?
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------

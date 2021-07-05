@@ -108,6 +108,8 @@ def test_stack_operations2():
     The total size of the stack is 18 elements.
     """
     stack = chap6.ArrayStack()
+    with pytest.raises(chap6.Empty):
+        stack.top()  # Validate raises error for empty stack
     for x in range(3):
         with pytest.raises(chap6.Empty):
             stack.pop()
@@ -229,6 +231,8 @@ def test_queue_operations(queue_ops):
     values = chap6.queue_operations()  # My answers to the exercise
     # Instantiate a queue and perform the queue operations to verify my answers
     queue = chap6.ArrayQueue()
+    with pytest.raises(chap6.Empty):
+        queue.first()  # Verify raises error on empty queue
     for value, op in zip(values, operations):
         if op is not None:
             if op[0] == 'enqueue':
@@ -318,6 +322,11 @@ def test_deque_queue(queue_ops):
     operations = queue_ops.operations   # Queue operations stored in fixture
     deque_q = chap6.DequeQueue()        # Queue based on deque
     queue = chap6.ArrayQueue()          # Queue based on list
+    # Verify deque queue raises errors for invalid operations
+    with pytest.raises(chap6.Empty):
+        deque_q.first()
+    with pytest.raises(chap6.Empty):
+        deque_q.dequeue()
     # Perform queue operations and verify results agree between the queues
     for op in operations:
         if op is not None:
@@ -333,6 +342,9 @@ def test_deque_queue(queue_ops):
         queue_vals = [queue._data[idx] for idx in indices]
         deque_q_vals = list(deque_q._data)
         assert deque_q_vals == queue_vals  # Compare queues for every operation
+        assert len(deque_q) == len(queue)
+        if len(queue) > 0:
+            assert queue.first() == deque_q.first()
 
 
 def test_deque_ops():
@@ -487,6 +499,14 @@ def test_queue_rotate(n):
     """
     queue = chap6.ArrayQueue()       # Original queue class
     r_que = chap6.RotateQueue()      # Queue class with new rotate() method
+    # Verify rotate queue raises errors for invalid operations
+    with pytest.raises(chap6.Empty):
+        r_que.first()
+    with pytest.raises(chap6.Empty):
+        r_que.dequeue()
+    with pytest.raises(chap6.Empty):
+        r_que.rotate()
+    # Test rotate*() method
     for x in range(n):               # Enqueue queues with same data
         queue.enqueue(x)
         r_que.enqueue(x)
@@ -495,6 +515,16 @@ def test_queue_rotate(n):
         r_que.rotate()
         assert queue._data == r_que._data  # Verify operations are equivalent
         assert queue._front == r_que._front
+        assert len(queue) == len(r_que)
+        assert queue.first() == r_que.first()
+    for _ in range(len(queue)):
+        queue.dequeue()
+        r_que.dequeue()
+        assert queue._data == r_que._data  # Verify operations are equivalent
+        assert queue._front == r_que._front
+        assert len(queue) == len(r_que)
+        if len(queue) > 0:
+            assert queue.first() == r_que.first()
 
 
 def test_cow_bridge():
@@ -594,6 +624,8 @@ def test_array_deque():
                 deq.popleft()
             with pytest.raises(chap6.Empty):
                 adeq.delete_first()
+            with pytest.raises(chap6.Empty):
+                adeq.delete_last()
             # Verify viewing elements in empty list raises error
             with pytest.raises(chap6.Empty):
                 adeq.first()
@@ -603,6 +635,16 @@ def test_array_deque():
                 deq[0]
             with pytest.raises(IndexError):
                 deq[-1]
+    # Test adding to empty deque and removing last element from deque
+    deq.appendleft(1)
+    adeq.add_first(1)
+    assert deq[0] == adeq.first()
+    assert deq[-1] == adeq.last()
+    assert len(deq) == len(adeq)
+    deq.pop()
+    adeq.delete_last()
+    assert len(deq) == len(adeq)
+    assert adeq._front == adeq._back
 
 
 def test_postfix_notation():
@@ -629,12 +671,19 @@ def test_leaky_stack():
     """
     stack = chap6.LeakyStack()
     n = stack.DEFAULT_CAPACITY
+    with pytest.raises(chap6.Empty):
+        stack.top()    # Verify raises error on empty stacks
     for x in range(3*n):
         stack.push(x)  # Verify old values are leaking as new values pushed
         assert stack._data == list(range(max(0, x+1-n), x+1))
+        assert stack.top() == x
     for x in range(n-1, -1, -1):
         stack.pop()  # Verify stack shrinks from full capacity
         assert len(stack) == x
         assert stack._data == list(range(2*n, 2*n+x))
     with pytest.raises(chap6.Empty):
         stack.pop()  # Empty stack should raise error when popped
+
+
+if __name__ == '__main__':
+    test_array_deque()

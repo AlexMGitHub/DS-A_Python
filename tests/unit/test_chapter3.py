@@ -99,6 +99,7 @@ def test_log_log_scale():
 
     Explain why the plot of the function n^c is a straight line with slope c
     on a log-log scale.
+
     --------------------------------------------------------------------------
     Solution:
     --------------------------------------------------------------------------
