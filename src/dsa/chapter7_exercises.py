@@ -21,11 +21,11 @@
 # Related third party imports
 
 # Local application/library specific imports
-from textbook_src.ch07 import Empty
-from textbook_src.ch07 import _DoublyLinkedBase
-from textbook_src.ch07 import LinkedQueue
-from textbook_src.ch07 import CircularQueue
-from textbook_src.ch07 import PositionalList
+from textbook_src.exceptions import Empty
+from textbook_src.ch07.doubly_linked_base import _DoublyLinkedBase
+from textbook_src.ch07.linked_queue import LinkedQueue
+from textbook_src.ch07.circular_queue import CircularQueue
+from textbook_src.ch07.positional_list import PositionalList
 
 
 # %% Reinforcement Exercises

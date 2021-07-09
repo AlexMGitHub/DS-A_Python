@@ -24,7 +24,8 @@ import pytest
 
 # Local application/library specific imports
 import dsa.chapter7_exercises as chap7
-from textbook_src.ch07 import FavoritesListMTF, PositionalList
+from textbook_src.ch07.favorites_list_mtf import FavoritesListMTF
+from textbook_src.ch07.positional_list import PositionalList
 
 
 # %% Reinforcement Exercises
