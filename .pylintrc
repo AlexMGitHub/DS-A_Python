@@ -566,7 +566,8 @@ exclude-protected=_asdict,
                   _value,
                   _key,
                   _Node,
-                  _table
+                  _table,
+                  _parent
 
 # List of valid names for the first argument in a class method.
 valid-classmethod-first-arg=cls

@@ -26,11 +26,6 @@ import dsa.chapter10_exercises as chap10
 from textbook_src.ch07.positional_list import PositionalList
 from textbook_src.ch07.doubly_linked_base import _DoublyLinkedBase
 
-"""
-1,2,3,4,6,7,8,9,10,11,12
-
-"""
-
 
 # %% Reinforcement Exercises
 def test_mutable_map_pop():
