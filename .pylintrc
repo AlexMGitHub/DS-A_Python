@@ -481,7 +481,12 @@ good-names=i,
            M_head,
            L_tail,
            L_head,
-           v
+           v,
+           A,
+           B,
+           d,
+           N,
+           s
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted
