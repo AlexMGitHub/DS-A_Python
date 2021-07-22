@@ -22,7 +22,7 @@ The DS-A_Python package has a standard directory structure with source code cont
 The `src/` directory contains three directories.  The solutions to the exercises are contained within `dsa/`, while some source code from the [textbook's GitHub repo](https://github.com/mjwestcott/Goodrich) (with license) is contained in the `textbook_src/` directory.  The third directory, `interviews/` consists of solutions to interview questions or exercises relevant to data structures and algorithms.
 
 ## Testing with `pytest`
-Pytest comes out of the box with powerful and easy-to-use features like test parameterization and test fixtures.  It also requires less boilerplate code than the `unittest` unit testing framework included in the Python standard library.  My secondary goal for working through *Data Structures and Algorithms in Python* was to become more familiar with`pytest`and software testing in general.  I learned how to parameterize tests, create my own custom test fixtures, mock Python built-ins, and use`pytest` plugins like `pytest-cov` to measure the code coverage of my tests.
+`pytest` comes out of the box with powerful and easy-to-use features like test parameterization and test fixtures.  It also requires less boilerplate code than the `unittest` unit testing framework included in the Python standard library.  My secondary goal for working through *Data Structures and Algorithms in Python* was to become more familiar with`pytest`and software testing in general.  I learned how to parameterize tests, create my own custom test fixtures, mock Python built-ins, and use`pytest` plugins like `pytest-cov` to measure the code coverage of my tests.
 
 
 ### `pytest-cov`
@@ -42,24 +42,31 @@ I prefer to view the results in the web browser, as the source code for each tes
 The following is a brief overview of the commands and syntax that I used most often when writing the unit tests in this repo.  Statements preceded by `$` indicate terminal commands; all other statements are Python code unless specified otherwise.
 
 - Run all tests in package in verbose mode
+
 `$ pytest -v`
 
 - Run all tests in a module in verbose mode
+
 `$ pytest -v tests/unit/test_chapter4.py`
 
 - Run a specific test and disable stdout capture so that you can view print statements
+
 `$ pytest -v -s tests/unit/test_chapter4.py::test_os_walk`
 
 - Decorator to mark tests you'd like to skip
+
 `@pytest.mark.skip(reason='Work in progress')`
 
 - View list of registered markers
+
 `$ pytest --markers`
 
 - Run tests with strict markers option to catch marker typos
+
 `$ pytest -v --strict-markers tests/unit/test_chapter4.py`
 
 - Register markers in pytest.ini file for strict marker mode
+
 ```
 [pytest]
 markers =
@@ -67,15 +74,19 @@ markers =
 ```
 
 - Don't run slow tests marked "slow"
+
 `$ pytest -v --strict-markers -m 'not slow' tests/unit/test_chapter4.py`
 
 #### Checking coverage:
 
 - Run coverage over entire source directory, including source code that no tests have been written for
+
 `$ pytest --cov=src`
 
 - Run coverage over entire source directory and save report to HTML
+
 `$ pytest --cov=src --cov-report=html`
 
 - Tell pytest-cov to focus only on code tested by the `tests/` directory in the `dsa` package
+
 `$ pytest --cov=dsa tests/ --cov-report=html`
