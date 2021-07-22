@@ -141,7 +141,7 @@ def test_recursive_unique():
     unique40 = list(range(n2))  # n = 90 elements
     time1 = timeit(lambda: chap4.recursive_unique(unique30), number=10000)
     time2 = timeit(lambda: chap4.recursive_unique(unique40), number=10000)
-    assert (0.8*growth) <= time2/time1 <= (1.2*growth)
+    assert (0.5*growth) <= time2/time1 <= (1.5*growth)
     sys.setrecursionlimit(recursion_limit)  # Revert to original limit
 
 
@@ -200,7 +200,7 @@ def test_all_subsets():
         ['b', 'c'],
         ['a', 'c'],
         set1
-        ]
+    ]
     assert len(result) == 8
     for subset in expected_results:
         assert subset in result

@@ -20,6 +20,7 @@
 
 # Related third party imports
 import pytest
+import numpy as np
 
 # Local application/library specific imports
 import dsa.chapter11_exercises as chap11
@@ -163,16 +164,25 @@ def test_nonrecursive_search():
     """
     tm_orig = chap11.TreeMap()
     tm_new = chap11.TreeMapNonRecursiveSearch()
-    n = 100
-    for x in range(n):  # Add some key-value pairs to the tree maps
+    n = 100             # Length of sequence of random integers
+    low = 500           # Lower boundary of random integer range
+    high = 1000         # Upper boundary of random integer range
+    rng = np.random.default_rng(37)
+    rints = tuple(rng.choice(range(low, high+1), size=n, replace=False))
+    for x in rints:     # Add some key-value pairs to the tree maps
         tm_orig[x] = x
         tm_new[x] = x
-    assert tm_orig[n-1] == tm_new[n-1]  # Verify get operation works
+    for x in rints:
+        assert tm_orig[x] == tm_new[x]  # Verify get operation works
     with pytest.raises(KeyError):
-        tm_new[n]                       # Key does not exist
-    for x in range(n//4, n//2):
-        del tm_orig[x]                  # Delete a portion of the items
+        tm_new[low-1]                   # Key does not exist
+    with pytest.raises(KeyError):
+        tm_new[high+1]                  # Key does not exist
+    for count, x in enumerate(rints):
+        del tm_orig[x]                  # Delete item
         del tm_new[x]
+        if count > n//2:
+            break                       # Only delete half of items
     for orig, new in zip(tm_orig, tm_new):
         assert orig == new              # Verify that items match original
 
@@ -660,3 +670,7 @@ def test_worst_case_height():
     e. The worst-case height of a red-black tree is 2*log(n+1)-2, height of 32.
     """
     assert chap11.worst_case_height()
+
+
+if __name__ == '__main__':
+    test_nonrecursive_search()
