@@ -143,7 +143,8 @@ disable=print-statement,
         xreadlines-attribute,
         deprecated-sys-function,
         exception-escape,
-        comprehension-escape
+        comprehension-escape,
+        protected-access
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -489,7 +490,10 @@ good-names=i,
            s,
            P,
            X,
-           fp
+           fp,
+           rp,
+           y,
+           u
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted
@@ -575,7 +579,13 @@ exclude-protected=_asdict,
                   _key,
                   _Node,
                   _table,
-                  _parent
+                  _parent,
+                  _Item,
+                  _hash_table,
+                  _default_capacity,
+                  _container,
+                  _insert_node,
+                  _delete_node
 
 # List of valid names for the first argument in a class method.
 valid-classmethod-first-arg=cls
