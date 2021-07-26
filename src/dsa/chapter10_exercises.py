@@ -110,7 +110,7 @@ def worst_case_running_time():
 
 
 class LinkedListMap(UnsortedTableMap):
-    """Solution to Exercise R-10.5
+    """Solution to Exercise R-10.5.
 
     Reimplement the UnsortedTableMap class from Section 10.1.5, using the
     PositionalList class from Section 7.4 rather than a Python list.
@@ -274,6 +274,10 @@ class SimpleChainHashTable:
         raise KeyError('Invalid key!')    # Key not found in bucket
 
     def __setitem__(self, k, v):
+        """Add key-value pair to hash table.
+
+        Overwrite the value of existing key.
+        """
         j = self._hash_function(k)
         for idx, tup in enumerate(self._table[j]):
             if k in tup:                      # Key already exists in bucket
@@ -382,6 +386,10 @@ class SimpleLinearProbeHashTable(SimpleChainHashTable):
         return self._table[key_idx][1]       # Key matches
 
     def __setitem__(self, k, v):
+        """Add key-value pair to hash table.
+
+        Overwrite the value of existing key.
+        """
         j = self._hash_function(k)
         if self._table[j] is None:
             self._table[j] = (k, v)          # Key is new, write to table

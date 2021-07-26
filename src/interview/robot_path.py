@@ -62,12 +62,11 @@ The solution will require writing classes to implement the following:
     b. A nested Edge class for the Graph
     c. A Map class implemented using a hash table for the adjacency map
     d. A nested Item class for the Map
-2. A PriorityQueue class implemented using a heap
-    a. A BinaryTree class to implement the heap
-    b. A PositionalList class to implement the BinaryTree
-    c. A nested Position class for the PositionalList
-    d. A DoublyLinkedList class to implement the positional list
-    e. A nested Node class for the doubly linked list
+2. An  AdaptablePriorityQueue class implemented using a heap
+    a. A nested Item class for the AdaptablePriorityQueue
+    b. A BinaryTree class to implement the heap
+    c. A nested Node class for the BinaryTree
+    d. A circular queue to implement BFS for the binary tree
 
 The solution will require writing functions to implement the following:
 1. Reading in the ASCII map and converting it into a graph

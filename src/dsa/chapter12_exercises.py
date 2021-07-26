@@ -19,7 +19,6 @@
 # Standard system imports
 
 # Related third party imports
-import numpy as np
 
 # Local application/library specific imports
 
@@ -152,9 +151,9 @@ def sequence_union(A, B):
     """Solution to exercise R-12.7.
 
     Suppose we are given two n-element sorted sequences A and B each with
-    distinct elements, but potentially some elements that are in both sequences.
-    Describe an O(n)-time method for computing a sequence representing the
-    union A ∪ B (with no duplicates) as a sorted sequence.
+    distinct elements, but potentially some elements that are in both
+    sequences.  Describe an O(n)-time method for computing a sequence
+    representing the union A ∪ B (with no duplicates) as a sorted sequence.
 
     ---------------------------------------------------------------------------
     Solution:
@@ -188,7 +187,7 @@ def sequence_union(A, B):
             j += 1
         else:
             j += 1                  # B values too low, skip ahead through B
-    return(union)
+    return union
 
 
 def quick_sort_pivot1():

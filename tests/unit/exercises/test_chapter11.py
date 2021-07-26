@@ -670,7 +670,3 @@ def test_worst_case_height():
     e. The worst-case height of a red-black tree is 2*log(n+1)-2, height of 32.
     """
     assert chap11.worst_case_height()
-
-
-if __name__ == '__main__':
-    test_nonrecursive_search()

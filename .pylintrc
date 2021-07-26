@@ -493,7 +493,13 @@ good-names=i,
            fp,
            rp,
            y,
-           u
+           u,
+           g,
+           fq,
+           _N,
+           old_N,
+           q,
+           _Position
 
 # Good variable names regexes, separated by a comma. If names match any regex,
 # they will always be accepted

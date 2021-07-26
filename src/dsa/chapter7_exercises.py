@@ -35,9 +35,11 @@ class SinglyLinkedList:
     Give an algorithm for finding the second-to-last node in a singly linked
     list in which the last node is indicated by a next reference of None.
     """
+
     # -------------------------- nested _Node class --------------------------
     class _Node:
         """Lightweight, nonpublic class for storing a singly linked node."""
+
         __slots__ = '_element', '_next'         # streamline memory usage
 
         def __init__(self, element, n_next):    # initialize node's fields
@@ -113,7 +115,7 @@ class SinglyLinkedList:
         return desired_node._element
 
     def get_node(self, idx):
-        """Method that traverses list and returns node at index."""
+        """Traverse list and returns node at index."""
         if self.is_empty():
             raise Empty('Stack is empty')
         if not 0 <= idx < self._size:  # Valid indices between 0 and n-1
@@ -285,7 +287,7 @@ class DoublyLinkedList(_DoublyLinkedBase):
         return desired_node._element
 
     def get_node(self, idx):
-        """Method that traverses list and returns node at index."""
+        """Traverse list and returns node at index."""
         if self.is_empty():
             raise Empty('Stack is empty')
         if not 0 <= idx < self._size:  # Valid indices between 0 and n-1
@@ -369,8 +371,8 @@ class CircularListIdentify(CircularQueue):
     """Solution to exercise R-7.6.
 
     Suppose that x and y are references to nodes of circularly linked lists,
-    although not necessarily the same list. Describe a fast algorithm for telling
-    if x and y belong to the same list.
+    although not necessarily the same list. Describe a fast algorithm for
+    telling if x and y belong to the same list.
 
     --------------------------------------------------------------------------
     Solution:
@@ -384,6 +386,7 @@ class CircularListIdentify(CircularQueue):
     # nested _Node class
     class _Node:
         """Override _Node class to accept list reference."""
+
         __slots__ = '_element', '_next', '_list'      # streamline memory usage
 
         def __init__(self, element, n_next, mylist):
@@ -524,7 +527,7 @@ class PositionalListMax(PositionalList):
     """
 
     def max(self):
-        """Returns maximum element of positional list."""
+        """Return maximum element of positional list."""
         max_val = self.first().element()
         for element in self:
             if element > max_val:
@@ -541,7 +544,7 @@ class PositionalListFind(PositionalList):
     """
 
     def find(self, find_e):
-        """Returns position of first occurrence of element e.
+        """Return position of first occurrence of element e.
 
         Return None if element not found.
         """
@@ -570,7 +573,7 @@ class PositionalListRecursiveFind(PositionalList):
     """
 
     def find(self, find_e):
-        """Returns position of first occurrence of element e.
+        """Return position of first occurrence of element e.
 
         Return None if element not found.
         """

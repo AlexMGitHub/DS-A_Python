@@ -428,6 +428,7 @@ class EulerTourLevelNumber(BinaryEulerTour):
 
     def _hook_previsit(self, p, d, path):
         """Visit Position p, before the tour of its children.
+
         p        Position of current position being visited
         d        depth of p in the tree
         path     list of indices of children on path from root to p

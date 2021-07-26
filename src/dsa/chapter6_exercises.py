@@ -705,7 +705,7 @@ class ArrayDeque:
         self._back = 0
 
     def __len__(self):
-        """Returns the number of elements in the deque."""
+        """Return the number of elements in the deque."""
         return self._size
 
     def is_empty(self):

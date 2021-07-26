@@ -169,7 +169,7 @@ def test_concat_sll(method):
     for x in range(len(l_empty)):
         assert l_empty.traverse(x) == x + n // 2
     null = method(None, None)
-    assert null._head == null._tail == None
+    assert null._head is null._tail is None
     assert len(null) == 0
 
 
@@ -260,8 +260,8 @@ def test_node_from_same_list():
     """Solution to exercise R-7.6.
 
     Suppose that x and y are references to nodes of circularly linked lists,
-    although not necessarily the same list. Describe a fast algorithm for telling
-    if x and y belong to the same list.
+    although not necessarily the same list. Describe a fast algorithm for
+    telling if x and y belong to the same list.
 
     --------------------------------------------------------------------------
     Solution:

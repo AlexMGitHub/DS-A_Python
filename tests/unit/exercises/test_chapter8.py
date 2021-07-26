@@ -367,7 +367,7 @@ def test_mutable_linked_binary_tree():
     with pytest.raises(ValueError):
         bin_tree.delete(root_pos)  # Root has two children, delete illegal
     bin_tree.delete(right_pos)
-    assert bin_tree.right(root_pos) == None
+    assert bin_tree.right(root_pos) is None
     # Test attach() method
     with pytest.raises(ValueError):
         bin_tree.attach(root_pos, 1, 2)  # Node must not have children
