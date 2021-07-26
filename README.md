@@ -190,28 +190,28 @@ An example map with solution is shown below:
 #####################..........................###############################
 ```
 
-I performed the following steps to solve this exercise:
+I perform the following steps to solve this exercise:
 
 1. Read in the ASCII map
-2. Assigned the characters of the map to vertices in a weighted graph G
-3. Ran Djikstra's algorithm on G for the vertex containing the robot
-4. Computed the shortest-path tree from the resulting distance map
-5. Modified the ASCII map to show the robot's path to the goal and wrote to disk
+2. Assign the characters of the map to vertices in a weighted graph G
+3. Run Djikstra's algorithm on G for the vertex containing the robot
+4. Compute the shortest-path tree from the resulting distance map
+5. Modify the ASCII map to show the robot's path to the goal and write to disk
 
 I wrote all of the classes used to implement this solution from scratch:
-1. A Graph class implemented using an adjacency map
-    a. A nested Vertex class for the Graph
-    b. A nested Edge class for the Graph
-    c. A Map class implemented using a hash table for the adjacency map
-    d. A nested Item class for the Map
-2. An AdaptablePriorityQueue class implemented using a heap
-    a. A nested Item class for the AdaptablePriorityQueue
-    b. A Heap class
-    c. A BinaryTree class to implement the Heap class
-    d. A nested Node class for the BinaryTree
-    e. A circular queue to implement BFS for the binary tree
+- A Graph class implemented using an adjacency map
+  - A nested Vertex class for the Graph
+  - A nested Edge class for the Graph
+  - A Map class implemented using a hash table for the adjacency map
+  - A nested Item class for the Map
+- An AdaptablePriorityQueue class implemented using a heap
+  - A nested Item class for the AdaptablePriorityQueue
+  - A Heap class
+  - A BinaryTree class to implement the Heap class
+  - A nested Node class for the BinaryTree
+  - A circular queue to implement BFS for the binary tree
 
-All of the data structures were unit-tested.  I performed functional testing of the solution itself by creating a series of small ASCII test maps and their shortest-path solutions.  These test maps were input into the solver, and the result was compared to the solution files.  The resulting code passes all tests with 100% code coverage:
+I wrote unit tests for all of the data structures listed above.  The solution itself is functionally tested using a series of small ASCII test maps and their shortest-path solutions.  The functional test inputs these test maps into the solver, and the result is compared to the solution files.  The code passes all tests with 100% code coverage:
 
 <p align="center">
 <img src="docs/img/robot_coverage.png" title="Robot code coverage" alt="Robot code coverage" width="600"/>
