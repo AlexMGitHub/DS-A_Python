@@ -41,17 +41,21 @@ I prefer to view the results in the web browser, as the source code for each tes
 
 The following is a brief overview of the commands and syntax that I used most often when writing the unit tests in this repo.  Statements preceded by `$` indicate terminal commands; all other statements are Python code unless specified otherwise.
 
-- Run all tests in package in verbose mode
+- Run all tests in repo (all packages) in verbose mode
 
 `$ pytest -v`
 
+- Run all tests in the interview package in verbose mode
+
+`pytest -v tests/unit/interview/`
+
 - Run all tests in a module in verbose mode
 
-`$ pytest -v tests/unit/test_chapter4.py`
+`$ pytest -v tests/unit/exercises/test_chapter4.py`
 
 - Run a specific test and disable stdout capture so that you can view print statements
 
-`$ pytest -v -s tests/unit/test_chapter4.py::test_os_walk`
+`$ pytest -v -s tests/unit/exercises/test_chapter4.py::test_os_walk`
 
 - Decorator to mark tests you'd like to skip
 
@@ -63,7 +67,7 @@ The following is a brief overview of the commands and syntax that I used most of
 
 - Run tests with strict markers option to catch marker typos
 
-`$ pytest -v --strict-markers tests/unit/test_chapter4.py`
+`$ pytest -v --strict-markers tests/unit/exercises/test_chapter4.py`
 
 - Register markers in pytest.ini file for strict marker mode
 
@@ -75,7 +79,7 @@ markers =
 
 - Don't run slow tests marked "slow"
 
-`$ pytest -v --strict-markers -m 'not slow' tests/unit/test_chapter4.py`
+`$ pytest -v --strict-markers -m 'not slow' tests/unit/exercises/test_chapter4.py`
 
 #### Checking coverage:
 
