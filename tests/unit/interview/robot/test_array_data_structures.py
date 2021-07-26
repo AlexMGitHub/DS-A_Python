@@ -20,7 +20,7 @@
 import pytest
 
 # Local application/library specific imports
-from interview.array_data_structures import Map, Queue
+from interview.robot.array_data_structures import Map, Queue
 
 
 # %% Test Map class and nested _Item class

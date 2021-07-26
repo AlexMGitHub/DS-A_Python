@@ -21,7 +21,7 @@ import pytest
 import numpy as np
 
 # Local application/library specific imports
-from interview.heap_data_structures import Heap, AdaptablePriorityQueue
+from interview.robot.heap_data_structures import Heap, AdaptablePriorityQueue
 
 
 # %% Test BinaryTree, Heap, and AdaptablePriorityQueue classes.

@@ -21,8 +21,8 @@ import pytest
 import numpy as np
 
 # Local application/library specific imports
-from interview.graph_data_structures import Graph
-from interview.array_data_structures import Map
+from interview.robot.graph_data_structures import Graph
+from interview.robot.array_data_structures import Map
 
 
 # %% Test Graph class and nested Vertex and Edge classes.

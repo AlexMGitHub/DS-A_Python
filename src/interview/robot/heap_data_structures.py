@@ -27,7 +27,7 @@
 # Related third party imports
 
 # Local application/library specific imports
-from interview.array_data_structures import Queue
+from interview.robot.array_data_structures import Queue
 
 
 # %% Classes

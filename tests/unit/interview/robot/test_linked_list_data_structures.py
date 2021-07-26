@@ -20,9 +20,9 @@
 import pytest
 
 # Local application/library specific imports
-from interview.linked_list_data_structures import DoublyLinkedList
-from interview.linked_list_data_structures import PositionalList
-from interview.array_data_structures import Map
+from interview.robot.linked_list_data_structures import DoublyLinkedList
+from interview.robot.linked_list_data_structures import PositionalList
+from interview.robot.array_data_structures import Map
 
 
 # %% Test DoublyLinkedList, PositionalList, and nested _Position classes

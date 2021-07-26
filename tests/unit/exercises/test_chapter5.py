@@ -74,6 +74,7 @@ def test_sum_matrix2():
 @pytest.fixture(name="matrices", scope="class")
 def matrix_fixture():
     """Fixture to supply matrices to the TestMatrix() class."""
+
     class MatrixInit:
         """Fixture class to store matrices as instance variables."""
 
